@@ -1,0 +1,61 @@
+Exercise 1: Core
+```{r}
+round(3.14159)
+round(3.14159, digits = 2)
+```
+
+Exercise 2: Argument order
+```{r}
+rep(5,7)
+rep(x = 5, times = 7)
+```
+
+Exercise 3: Assigning values to variables
+```{r}
+number <- 8
+name <- "matilda"
+logic <- TRUE
+
+print(number)
+print(class(number))
+print(name)
+print(class(name))
+print(logic)
+print(class(logic))
+```
+Exercise 4: Using variables of different types
+```{r}
+cell_ID1 <- "CX1"
+cell_ID2 <- "CX2"
+treated_1 <- TRUE
+treated_2 <- FALSE
+before_1 <- 5415
+before_2 <- 8123
+after_1 <- 1432
+after_2 <- 7543
+
+cell_ID <- c(cell_ID1, cell_ID2)
+treated <- c(treated_1, treated_2)
+before <- c(before_1, before_2)
+after <- c(after_1, after_2)
+print(after)
+```
+
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+pet <- all_my_pets[4]
+print((pet))
+```
+
+```{r}
+library(gt)
+library(tidyverse)
+cell <- tibble(
+  cell_ID = cell_ID,
+  treated = treated,
+  before = before,
+  after = after
+)
+gt(cell)
+```
+
