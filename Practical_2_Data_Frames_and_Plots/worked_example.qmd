@@ -57,4 +57,12 @@ gt(migration_exc)
 
 
 
+```{r}
+migration_grouped <- migration_exc |> group_by(Site)
+glimpse(migration_grouped)
+lat_df <- migration_grouped |>
+  summarise(Highest_Lat_Stopover = max(Stopover_Latitude, na.rm = TRUE))
+
+gt(lat_df)
+```
 
