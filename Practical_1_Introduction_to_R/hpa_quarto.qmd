@@ -1,0 +1,26 @@
+---
+title: "brain summary exercise"
+author: "Matilda Hawes"
+format: html
+---
+
+## Quarto
+
+Here, I am determining the total number of genes with regionally elevated expression in the forebrain, in humans, pigs and mice. 
+
+Humans:
+```{r}
+sum(180,162,83,57,110,87,67,22,37,196,90,45,45)
+```
+
+Pigs:
+```{r}
+sum(109,165,89,157,31,45,114,4,49,41,37,121,236)
+```
+
+Mice:
+```{r}
+sum(55,182,158,185,60,98,47,62,38,98,98,91)
+```
+
+Pigs have the highest number of genes with regionally elevated expression, with 1198 genes.
