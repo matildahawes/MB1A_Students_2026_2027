@@ -7,6 +7,23 @@ author: "matilda hawes"
 library(gt)
 library(tidyverse)
 library(maps)
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+library(dplyr)
 breeding_sites <- read_csv("data/breeding_site_locations.csv") 
 gt(breeding_sites)
 ```
@@ -52,6 +69,10 @@ breeding_exc <- breeding_selected |> filter(Site != "Spain")
 gt(breeding_exc)
 
 migration_exc <- migration_selected |> filter(Site != "Spain")
+```
+
+
+```{r}
 gt(migration_exc)
 ```
 
@@ -64,5 +85,42 @@ lat_df <- migration_grouped |>
   summarise(Highest_Lat_Stopover = max(Stopover_Latitude, na.rm = TRUE))
 
 gt(lat_df)
+```
+```{r}
+
+migration_grouped <- migration_exc |> group_by(Site)
+
+migration_summary <- migration_grouped |>
+  summarise( 
+    Stopover_Longitude = median(Stopover_Longitude, na.rm = TRUE),
+    Stopover_Latitude = median(Stopover_Latitude, na.rm = TRUE),
+    Iberian_Latitude = median(Iberian_Latitude, na.rm = TRUE),
+    Iberian_Longitude = median(Iberian_Longitude, na.rm = TRUE),
+    Westmost_Latitude = median(Westmost_Latitude, na.rm = TRUE),
+    Westmost_Longitude = median(Westmost_Longitude, na.rm = TRUE),
+    Winter_Longitude = median(Winter_Longitude, na.rm = TRUE),
+    Winter_Latitude = median(Winter_Latitude, na.rm = TRUE)
+  )
+gt(migration_summary)
+```
+
+```{r}
+combined_bird_data <- full_join(breeding_exc, migration_summary)
+combined_bird_piv <- combined_bird_data |>
+  pivot_longer(
+    cols = ends_with(c("_Longitude", "_Latitude")),
+    names_sep = "_",
+    names_to = c("Location_Type", ".value")
+  )
+keep_autumn <- c("Breeding", "Stopover", "Winter")
+keep_spring <- c("Breeding", "Iberian", "Westmost", "Winter")
+
+spring_data <- combined_bird_piv|>
+  filter(Location_Type %in% keep_spring)
+autumn_data <- combined_bird_piv|>
+  filter(Location_Type %in% keep_autumn)
+write_csv(spring_data, "output/birds_spring.csv")
+write_csv(autumn_data, "output/birds_autumn.csv")
+gt(combined_bird_piv)
 ```
 
