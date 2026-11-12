@@ -135,7 +135,11 @@ The following object is masked from 'package:purrr':
 
     map</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>breeding_sites <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/breeding_site_locations.csv"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>breeding_sites <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/breeding_site_locations.csv"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 10 Columns: 12
 ── Column specification ────────────────────────────────────────────────────────
@@ -146,25 +150,25 @@ dbl (3): Longitude, Latitude, Altitude_m
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(breeding_sites)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(breeding_sites)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="evgvqxhzgb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#evgvqxhzgb table {
+<div id="dvbarhffwd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dvbarhffwd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#evgvqxhzgb thead, #evgvqxhzgb tbody, #evgvqxhzgb tfoot, #evgvqxhzgb tr, #evgvqxhzgb td, #evgvqxhzgb th {
+#dvbarhffwd thead, #dvbarhffwd tbody, #dvbarhffwd tfoot, #dvbarhffwd tr, #dvbarhffwd td, #dvbarhffwd th {
   border-style: none;
 }
 
-#evgvqxhzgb p {
+#dvbarhffwd p {
   margin: 0;
   padding: 0;
 }
 
-#evgvqxhzgb .gt_table {
+#dvbarhffwd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -190,12 +194,12 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-left-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_caption {
+#dvbarhffwd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#evgvqxhzgb .gt_title {
+#dvbarhffwd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -207,7 +211,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-bottom-width: 0;
 }
 
-#evgvqxhzgb .gt_subtitle {
+#dvbarhffwd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -219,7 +223,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-top-width: 0;
 }
 
-#evgvqxhzgb .gt_heading {
+#dvbarhffwd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -231,13 +235,13 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-right-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_bottom_border {
+#dvbarhffwd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_col_headings {
+#dvbarhffwd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -252,7 +256,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-right-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_col_heading {
+#dvbarhffwd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -272,7 +276,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   overflow-x: hidden;
 }
 
-#evgvqxhzgb .gt_column_spanner_outer {
+#dvbarhffwd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -284,15 +288,15 @@ dbl (3): Longitude, Latitude, Altitude_m
   padding-right: 4px;
 }
 
-#evgvqxhzgb .gt_column_spanner_outer:first-child {
+#dvbarhffwd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#evgvqxhzgb .gt_column_spanner_outer:last-child {
+#dvbarhffwd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#evgvqxhzgb .gt_column_spanner {
+#dvbarhffwd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -304,11 +308,11 @@ dbl (3): Longitude, Latitude, Altitude_m
   width: 100%;
 }
 
-#evgvqxhzgb .gt_spanner_row {
+#dvbarhffwd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#evgvqxhzgb .gt_group_heading {
+#dvbarhffwd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -334,7 +338,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   text-align: left;
 }
 
-#evgvqxhzgb .gt_empty_group_heading {
+#dvbarhffwd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -349,15 +353,15 @@ dbl (3): Longitude, Latitude, Altitude_m
   vertical-align: middle;
 }
 
-#evgvqxhzgb .gt_from_md > :first-child {
+#dvbarhffwd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#evgvqxhzgb .gt_from_md > :last-child {
+#dvbarhffwd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#evgvqxhzgb .gt_row {
+#dvbarhffwd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -376,7 +380,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   overflow-x: hidden;
 }
 
-#evgvqxhzgb .gt_stub {
+#dvbarhffwd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -389,7 +393,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   padding-right: 5px;
 }
 
-#evgvqxhzgb .gt_stub_row_group {
+#dvbarhffwd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -403,15 +407,15 @@ dbl (3): Longitude, Latitude, Altitude_m
   vertical-align: top;
 }
 
-#evgvqxhzgb .gt_row_group_first td {
+#dvbarhffwd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#evgvqxhzgb .gt_row_group_first th {
+#dvbarhffwd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#evgvqxhzgb .gt_summary_row {
+#dvbarhffwd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -421,16 +425,16 @@ dbl (3): Longitude, Latitude, Altitude_m
   padding-right: 5px;
 }
 
-#evgvqxhzgb .gt_first_summary_row {
+#dvbarhffwd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_first_summary_row.thick {
+#dvbarhffwd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#evgvqxhzgb .gt_last_summary_row {
+#dvbarhffwd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -440,7 +444,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-bottom-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_grand_summary_row {
+#dvbarhffwd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -450,7 +454,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   padding-right: 5px;
 }
 
-#evgvqxhzgb .gt_first_grand_summary_row {
+#dvbarhffwd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -460,7 +464,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-top-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_last_grand_summary_row_top {
+#dvbarhffwd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -470,11 +474,11 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-bottom-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_striped {
+#dvbarhffwd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#evgvqxhzgb .gt_table_body {
+#dvbarhffwd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -483,7 +487,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-bottom-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_footnotes {
+#dvbarhffwd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -497,7 +501,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-right-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_footnote {
+#dvbarhffwd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -506,7 +510,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   padding-right: 5px;
 }
 
-#evgvqxhzgb .gt_sourcenotes {
+#dvbarhffwd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -520,7 +524,7 @@ dbl (3): Longitude, Latitude, Altitude_m
   border-right-color: #D3D3D3;
 }
 
-#evgvqxhzgb .gt_sourcenote {
+#dvbarhffwd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -528,72 +532,72 @@ dbl (3): Longitude, Latitude, Altitude_m
   padding-right: 5px;
 }
 
-#evgvqxhzgb .gt_left {
+#dvbarhffwd .gt_left {
   text-align: left;
 }
 
-#evgvqxhzgb .gt_center {
+#dvbarhffwd .gt_center {
   text-align: center;
 }
 
-#evgvqxhzgb .gt_right {
+#dvbarhffwd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#evgvqxhzgb .gt_font_normal {
+#dvbarhffwd .gt_font_normal {
   font-weight: normal;
 }
 
-#evgvqxhzgb .gt_font_bold {
+#dvbarhffwd .gt_font_bold {
   font-weight: bold;
 }
 
-#evgvqxhzgb .gt_font_italic {
+#dvbarhffwd .gt_font_italic {
   font-style: italic;
 }
 
-#evgvqxhzgb .gt_super {
+#dvbarhffwd .gt_super {
   font-size: 65%;
 }
 
-#evgvqxhzgb .gt_footnote_marks {
+#dvbarhffwd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#evgvqxhzgb .gt_asterisk {
+#dvbarhffwd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#evgvqxhzgb .gt_indent_1 {
+#dvbarhffwd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#evgvqxhzgb .gt_indent_2 {
+#dvbarhffwd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#evgvqxhzgb .gt_indent_3 {
+#dvbarhffwd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#evgvqxhzgb .gt_indent_4 {
+#dvbarhffwd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#evgvqxhzgb .gt_indent_5 {
+#dvbarhffwd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#evgvqxhzgb .katex-display {
+#dvbarhffwd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#evgvqxhzgb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dvbarhffwd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -763,13 +767,13 @@ dbl (3): Longitude, Latitude, Altitude_m
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(breeding_sites)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(breeding_sites)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Country"         "Site"            "Years"           "Longitude"      
  [5] "Latitude"        "Altitude_m"      "Habitat"         "Geolocator_type"
  [9] "Geo_male"        "Geo_female"      "Control_male"    "Control_female" </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(breeding_sites) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(breeding_sites) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 10
 Columns: 12
@@ -788,13 +792,13 @@ $ Control_female  &lt;chr&gt; "76/157 (48%)", "32/88 (36%)", "7/21 (33%)", NA, N
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">dim</span>(breeding_sites))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">dim</span>(breeding_sites))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10 12</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>migratory_connectivity <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/migratory_connectivity_dataset.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>migratory_connectivity <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/migratory_connectivity_dataset.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 100 Columns: 34
 ── Column specification ────────────────────────────────────────────────────────
@@ -805,25 +809,25 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">head</span>(migratory_connectivity))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(<span class="fu">head</span>(migratory_connectivity))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="uucxmwulel" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#uucxmwulel table {
+<div id="rtxxmrztti" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rtxxmrztti table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#uucxmwulel thead, #uucxmwulel tbody, #uucxmwulel tfoot, #uucxmwulel tr, #uucxmwulel td, #uucxmwulel th {
+#rtxxmrztti thead, #rtxxmrztti tbody, #rtxxmrztti tfoot, #rtxxmrztti tr, #rtxxmrztti td, #rtxxmrztti th {
   border-style: none;
 }
 
-#uucxmwulel p {
+#rtxxmrztti p {
   margin: 0;
   padding: 0;
 }
 
-#uucxmwulel .gt_table {
+#rtxxmrztti .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -849,12 +853,12 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-left-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_caption {
+#rtxxmrztti .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#uucxmwulel .gt_title {
+#rtxxmrztti .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -866,7 +870,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-bottom-width: 0;
 }
 
-#uucxmwulel .gt_subtitle {
+#rtxxmrztti .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -878,7 +882,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-top-width: 0;
 }
 
-#uucxmwulel .gt_heading {
+#rtxxmrztti .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -890,13 +894,13 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-right-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_bottom_border {
+#rtxxmrztti .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_col_headings {
+#rtxxmrztti .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -911,7 +915,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-right-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_col_heading {
+#rtxxmrztti .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -931,7 +935,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   overflow-x: hidden;
 }
 
-#uucxmwulel .gt_column_spanner_outer {
+#rtxxmrztti .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -943,15 +947,15 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   padding-right: 4px;
 }
 
-#uucxmwulel .gt_column_spanner_outer:first-child {
+#rtxxmrztti .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uucxmwulel .gt_column_spanner_outer:last-child {
+#rtxxmrztti .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uucxmwulel .gt_column_spanner {
+#rtxxmrztti .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -963,11 +967,11 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   width: 100%;
 }
 
-#uucxmwulel .gt_spanner_row {
+#rtxxmrztti .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#uucxmwulel .gt_group_heading {
+#rtxxmrztti .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -993,7 +997,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   text-align: left;
 }
 
-#uucxmwulel .gt_empty_group_heading {
+#rtxxmrztti .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1008,15 +1012,15 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   vertical-align: middle;
 }
 
-#uucxmwulel .gt_from_md > :first-child {
+#rtxxmrztti .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uucxmwulel .gt_from_md > :last-child {
+#rtxxmrztti .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uucxmwulel .gt_row {
+#rtxxmrztti .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1035,7 +1039,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   overflow-x: hidden;
 }
 
-#uucxmwulel .gt_stub {
+#rtxxmrztti .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1048,7 +1052,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   padding-right: 5px;
 }
 
-#uucxmwulel .gt_stub_row_group {
+#rtxxmrztti .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1062,15 +1066,15 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   vertical-align: top;
 }
 
-#uucxmwulel .gt_row_group_first td {
+#rtxxmrztti .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#uucxmwulel .gt_row_group_first th {
+#rtxxmrztti .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#uucxmwulel .gt_summary_row {
+#rtxxmrztti .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1080,16 +1084,16 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   padding-right: 5px;
 }
 
-#uucxmwulel .gt_first_summary_row {
+#rtxxmrztti .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_first_summary_row.thick {
+#rtxxmrztti .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#uucxmwulel .gt_last_summary_row {
+#rtxxmrztti .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1099,7 +1103,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-bottom-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_grand_summary_row {
+#rtxxmrztti .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1109,7 +1113,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   padding-right: 5px;
 }
 
-#uucxmwulel .gt_first_grand_summary_row {
+#rtxxmrztti .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1119,7 +1123,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-top-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_last_grand_summary_row_top {
+#rtxxmrztti .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1129,11 +1133,11 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-bottom-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_striped {
+#rtxxmrztti .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uucxmwulel .gt_table_body {
+#rtxxmrztti .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1142,7 +1146,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-bottom-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_footnotes {
+#rtxxmrztti .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1156,7 +1160,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-right-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_footnote {
+#rtxxmrztti .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1165,7 +1169,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   padding-right: 5px;
 }
 
-#uucxmwulel .gt_sourcenotes {
+#rtxxmrztti .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1179,7 +1183,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   border-right-color: #D3D3D3;
 }
 
-#uucxmwulel .gt_sourcenote {
+#rtxxmrztti .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1187,72 +1191,72 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
   padding-right: 5px;
 }
 
-#uucxmwulel .gt_left {
+#rtxxmrztti .gt_left {
   text-align: left;
 }
 
-#uucxmwulel .gt_center {
+#rtxxmrztti .gt_center {
   text-align: center;
 }
 
-#uucxmwulel .gt_right {
+#rtxxmrztti .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uucxmwulel .gt_font_normal {
+#rtxxmrztti .gt_font_normal {
   font-weight: normal;
 }
 
-#uucxmwulel .gt_font_bold {
+#rtxxmrztti .gt_font_bold {
   font-weight: bold;
 }
 
-#uucxmwulel .gt_font_italic {
+#rtxxmrztti .gt_font_italic {
   font-style: italic;
 }
 
-#uucxmwulel .gt_super {
+#rtxxmrztti .gt_super {
   font-size: 65%;
 }
 
-#uucxmwulel .gt_footnote_marks {
+#rtxxmrztti .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#uucxmwulel .gt_asterisk {
+#rtxxmrztti .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#uucxmwulel .gt_indent_1 {
+#rtxxmrztti .gt_indent_1 {
   text-indent: 5px;
 }
 
-#uucxmwulel .gt_indent_2 {
+#rtxxmrztti .gt_indent_2 {
   text-indent: 10px;
 }
 
-#uucxmwulel .gt_indent_3 {
+#rtxxmrztti .gt_indent_3 {
   text-indent: 15px;
 }
 
-#uucxmwulel .gt_indent_4 {
+#rtxxmrztti .gt_indent_4 {
   text-indent: 20px;
 }
 
-#uucxmwulel .gt_indent_5 {
+#rtxxmrztti .gt_indent_5 {
   text-indent: 25px;
 }
 
-#uucxmwulel .katex-display {
+#rtxxmrztti .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#uucxmwulel div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rtxxmrztti div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1518,7 +1522,7 @@ dbl (22): Year, Birth, deployAge, winterLongitude, winterLatitude, iblon, ib...
 
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(migratory_connectivity)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(migratory_connectivity)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 100
 Columns: 34
@@ -1557,36 +1561,36 @@ $ returnAD_Jy       &lt;dbl&gt; 489.5, 510.5, 498.5, 493.5, 526.0, 517.5, 492.5,
 $ returnFED_Jy      &lt;dbl&gt; 520, 499, NA, 495, 504, NA, 508, 503, 497, 503, NA, …
 $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, NA, …</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">dim</span>(migratory_connectivity))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">dim</span>(migratory_connectivity))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 100  34</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>breeding_selected <span class="ot">&lt;-</span> breeding_sites <span class="sc">|&gt;</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Site, Longitude, Latitude) <span class="sc">|&gt;</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Breeding_Longitude =</span> Longitude, <span class="at">Breeding_Latitude =</span> Latitude)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(breeding_selected)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>breeding_selected <span class="ot">&lt;-</span> breeding_sites <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Site, Longitude, Latitude) <span class="sc">|&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Breeding_Longitude =</span> Longitude, <span class="at">Breeding_Latitude =</span> Latitude)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(breeding_selected)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="bgplgwsjft" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bgplgwsjft table {
+<div id="jyysszjosy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jyysszjosy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bgplgwsjft thead, #bgplgwsjft tbody, #bgplgwsjft tfoot, #bgplgwsjft tr, #bgplgwsjft td, #bgplgwsjft th {
+#jyysszjosy thead, #jyysszjosy tbody, #jyysszjosy tfoot, #jyysszjosy tr, #jyysszjosy td, #jyysszjosy th {
   border-style: none;
 }
 
-#bgplgwsjft p {
+#jyysszjosy p {
   margin: 0;
   padding: 0;
 }
 
-#bgplgwsjft .gt_table {
+#jyysszjosy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1612,12 +1616,12 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-left-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_caption {
+#jyysszjosy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bgplgwsjft .gt_title {
+#jyysszjosy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1629,7 +1633,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-width: 0;
 }
 
-#bgplgwsjft .gt_subtitle {
+#jyysszjosy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1641,7 +1645,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-width: 0;
 }
 
-#bgplgwsjft .gt_heading {
+#jyysszjosy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1653,13 +1657,13 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_bottom_border {
+#jyysszjosy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_col_headings {
+#jyysszjosy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1674,7 +1678,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_col_heading {
+#jyysszjosy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1694,7 +1698,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#bgplgwsjft .gt_column_spanner_outer {
+#jyysszjosy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1706,15 +1710,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 4px;
 }
 
-#bgplgwsjft .gt_column_spanner_outer:first-child {
+#jyysszjosy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bgplgwsjft .gt_column_spanner_outer:last-child {
+#jyysszjosy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bgplgwsjft .gt_column_spanner {
+#jyysszjosy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1726,11 +1730,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   width: 100%;
 }
 
-#bgplgwsjft .gt_spanner_row {
+#jyysszjosy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bgplgwsjft .gt_group_heading {
+#jyysszjosy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1756,7 +1760,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   text-align: left;
 }
 
-#bgplgwsjft .gt_empty_group_heading {
+#jyysszjosy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1771,15 +1775,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: middle;
 }
 
-#bgplgwsjft .gt_from_md > :first-child {
+#jyysszjosy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bgplgwsjft .gt_from_md > :last-child {
+#jyysszjosy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bgplgwsjft .gt_row {
+#jyysszjosy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1798,7 +1802,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#bgplgwsjft .gt_stub {
+#jyysszjosy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1811,7 +1815,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#bgplgwsjft .gt_stub_row_group {
+#jyysszjosy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1825,15 +1829,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: top;
 }
 
-#bgplgwsjft .gt_row_group_first td {
+#jyysszjosy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bgplgwsjft .gt_row_group_first th {
+#jyysszjosy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bgplgwsjft .gt_summary_row {
+#jyysszjosy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1843,16 +1847,16 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#bgplgwsjft .gt_first_summary_row {
+#jyysszjosy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_first_summary_row.thick {
+#jyysszjosy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bgplgwsjft .gt_last_summary_row {
+#jyysszjosy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1862,7 +1866,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_grand_summary_row {
+#jyysszjosy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1872,7 +1876,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#bgplgwsjft .gt_first_grand_summary_row {
+#jyysszjosy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1882,7 +1886,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_last_grand_summary_row_top {
+#jyysszjosy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1892,11 +1896,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_striped {
+#jyysszjosy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bgplgwsjft .gt_table_body {
+#jyysszjosy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1905,7 +1909,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_footnotes {
+#jyysszjosy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1919,7 +1923,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_footnote {
+#jyysszjosy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1928,7 +1932,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#bgplgwsjft .gt_sourcenotes {
+#jyysszjosy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1942,7 +1946,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#bgplgwsjft .gt_sourcenote {
+#jyysszjosy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1950,72 +1954,72 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#bgplgwsjft .gt_left {
+#jyysszjosy .gt_left {
   text-align: left;
 }
 
-#bgplgwsjft .gt_center {
+#jyysszjosy .gt_center {
   text-align: center;
 }
 
-#bgplgwsjft .gt_right {
+#jyysszjosy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bgplgwsjft .gt_font_normal {
+#jyysszjosy .gt_font_normal {
   font-weight: normal;
 }
 
-#bgplgwsjft .gt_font_bold {
+#jyysszjosy .gt_font_bold {
   font-weight: bold;
 }
 
-#bgplgwsjft .gt_font_italic {
+#jyysszjosy .gt_font_italic {
   font-style: italic;
 }
 
-#bgplgwsjft .gt_super {
+#jyysszjosy .gt_super {
   font-size: 65%;
 }
 
-#bgplgwsjft .gt_footnote_marks {
+#jyysszjosy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bgplgwsjft .gt_asterisk {
+#jyysszjosy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bgplgwsjft .gt_indent_1 {
+#jyysszjosy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bgplgwsjft .gt_indent_2 {
+#jyysszjosy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bgplgwsjft .gt_indent_3 {
+#jyysszjosy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bgplgwsjft .gt_indent_4 {
+#jyysszjosy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bgplgwsjft .gt_indent_5 {
+#jyysszjosy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bgplgwsjft .katex-display {
+#jyysszjosy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bgplgwsjft div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jyysszjosy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2076,29 +2080,29 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>migration_selected <span class="ot">&lt;-</span> migratory_connectivity <span class="sc">|&gt;</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Site, winterLongitude, winterLatitude, pslon, pslat, iblon, iblat, awestlon, awestlat) <span class="sc">|&gt;</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Winter_Longitude =</span> winterLongitude, <span class="at">Winter_Latitude =</span> winterLatitude, <span class="at">Stopover_Longitude =</span> pslon, <span class="at">Stopover_Latitude =</span> pslat, <span class="at">Iberian_Longitude =</span> iblon, <span class="at">Iberian_Latitude =</span> iblat, <span class="at">Westmost_Longitude =</span> awestlon, <span class="at">Westmost_Latitude =</span> awestlat )</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(migration_selected)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>migration_selected <span class="ot">&lt;-</span> migratory_connectivity <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Site, winterLongitude, winterLatitude, pslon, pslat, iblon, iblat, awestlon, awestlat) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Winter_Longitude =</span> winterLongitude, <span class="at">Winter_Latitude =</span> winterLatitude, <span class="at">Stopover_Longitude =</span> pslon, <span class="at">Stopover_Latitude =</span> pslat, <span class="at">Iberian_Longitude =</span> iblon, <span class="at">Iberian_Latitude =</span> iblat, <span class="at">Westmost_Longitude =</span> awestlon, <span class="at">Westmost_Latitude =</span> awestlat )</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(migration_selected)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="nswyvbqwdq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#nswyvbqwdq table {
+<div id="oigyrkvkug" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oigyrkvkug table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nswyvbqwdq thead, #nswyvbqwdq tbody, #nswyvbqwdq tfoot, #nswyvbqwdq tr, #nswyvbqwdq td, #nswyvbqwdq th {
+#oigyrkvkug thead, #oigyrkvkug tbody, #oigyrkvkug tfoot, #oigyrkvkug tr, #oigyrkvkug td, #oigyrkvkug th {
   border-style: none;
 }
 
-#nswyvbqwdq p {
+#oigyrkvkug p {
   margin: 0;
   padding: 0;
 }
 
-#nswyvbqwdq .gt_table {
+#oigyrkvkug .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2124,12 +2128,12 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-left-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_caption {
+#oigyrkvkug .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nswyvbqwdq .gt_title {
+#oigyrkvkug .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2141,7 +2145,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-width: 0;
 }
 
-#nswyvbqwdq .gt_subtitle {
+#oigyrkvkug .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2153,7 +2157,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-width: 0;
 }
 
-#nswyvbqwdq .gt_heading {
+#oigyrkvkug .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2165,13 +2169,13 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_bottom_border {
+#oigyrkvkug .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_col_headings {
+#oigyrkvkug .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2186,7 +2190,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_col_heading {
+#oigyrkvkug .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2206,7 +2210,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#nswyvbqwdq .gt_column_spanner_outer {
+#oigyrkvkug .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2218,15 +2222,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 4px;
 }
 
-#nswyvbqwdq .gt_column_spanner_outer:first-child {
+#oigyrkvkug .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nswyvbqwdq .gt_column_spanner_outer:last-child {
+#oigyrkvkug .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nswyvbqwdq .gt_column_spanner {
+#oigyrkvkug .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2238,11 +2242,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   width: 100%;
 }
 
-#nswyvbqwdq .gt_spanner_row {
+#oigyrkvkug .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nswyvbqwdq .gt_group_heading {
+#oigyrkvkug .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2268,7 +2272,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   text-align: left;
 }
 
-#nswyvbqwdq .gt_empty_group_heading {
+#oigyrkvkug .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2283,15 +2287,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: middle;
 }
 
-#nswyvbqwdq .gt_from_md > :first-child {
+#oigyrkvkug .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nswyvbqwdq .gt_from_md > :last-child {
+#oigyrkvkug .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nswyvbqwdq .gt_row {
+#oigyrkvkug .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2310,7 +2314,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#nswyvbqwdq .gt_stub {
+#oigyrkvkug .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2323,7 +2327,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#nswyvbqwdq .gt_stub_row_group {
+#oigyrkvkug .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2337,15 +2341,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: top;
 }
 
-#nswyvbqwdq .gt_row_group_first td {
+#oigyrkvkug .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nswyvbqwdq .gt_row_group_first th {
+#oigyrkvkug .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nswyvbqwdq .gt_summary_row {
+#oigyrkvkug .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2355,16 +2359,16 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#nswyvbqwdq .gt_first_summary_row {
+#oigyrkvkug .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_first_summary_row.thick {
+#oigyrkvkug .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nswyvbqwdq .gt_last_summary_row {
+#oigyrkvkug .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2374,7 +2378,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_grand_summary_row {
+#oigyrkvkug .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2384,7 +2388,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#nswyvbqwdq .gt_first_grand_summary_row {
+#oigyrkvkug .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2394,7 +2398,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_last_grand_summary_row_top {
+#oigyrkvkug .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2404,11 +2408,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_striped {
+#oigyrkvkug .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nswyvbqwdq .gt_table_body {
+#oigyrkvkug .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2417,7 +2421,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_footnotes {
+#oigyrkvkug .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2431,7 +2435,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_footnote {
+#oigyrkvkug .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2440,7 +2444,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#nswyvbqwdq .gt_sourcenotes {
+#oigyrkvkug .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2454,7 +2458,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#nswyvbqwdq .gt_sourcenote {
+#oigyrkvkug .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2462,72 +2466,72 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#nswyvbqwdq .gt_left {
+#oigyrkvkug .gt_left {
   text-align: left;
 }
 
-#nswyvbqwdq .gt_center {
+#oigyrkvkug .gt_center {
   text-align: center;
 }
 
-#nswyvbqwdq .gt_right {
+#oigyrkvkug .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nswyvbqwdq .gt_font_normal {
+#oigyrkvkug .gt_font_normal {
   font-weight: normal;
 }
 
-#nswyvbqwdq .gt_font_bold {
+#oigyrkvkug .gt_font_bold {
   font-weight: bold;
 }
 
-#nswyvbqwdq .gt_font_italic {
+#oigyrkvkug .gt_font_italic {
   font-style: italic;
 }
 
-#nswyvbqwdq .gt_super {
+#oigyrkvkug .gt_super {
   font-size: 65%;
 }
 
-#nswyvbqwdq .gt_footnote_marks {
+#oigyrkvkug .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nswyvbqwdq .gt_asterisk {
+#oigyrkvkug .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nswyvbqwdq .gt_indent_1 {
+#oigyrkvkug .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nswyvbqwdq .gt_indent_2 {
+#oigyrkvkug .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nswyvbqwdq .gt_indent_3 {
+#oigyrkvkug .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nswyvbqwdq .gt_indent_4 {
+#oigyrkvkug .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nswyvbqwdq .gt_indent_5 {
+#oigyrkvkug .gt_indent_5 {
   text-indent: 25px;
 }
 
-#nswyvbqwdq .katex-display {
+#oigyrkvkug .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#nswyvbqwdq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oigyrkvkug div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3654,26 +3658,26 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>breeding_exc <span class="ot">&lt;-</span> breeding_selected <span class="sc">|&gt;</span> <span class="fu">filter</span>(Site <span class="sc">!=</span> <span class="st">"Spain"</span>)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(breeding_exc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>breeding_exc <span class="ot">&lt;-</span> breeding_selected <span class="sc">|&gt;</span> <span class="fu">filter</span>(Site <span class="sc">!=</span> <span class="st">"Spain"</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(breeding_exc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="wdkrigtxyc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wdkrigtxyc table {
+<div id="dwvohhfurp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dwvohhfurp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wdkrigtxyc thead, #wdkrigtxyc tbody, #wdkrigtxyc tfoot, #wdkrigtxyc tr, #wdkrigtxyc td, #wdkrigtxyc th {
+#dwvohhfurp thead, #dwvohhfurp tbody, #dwvohhfurp tfoot, #dwvohhfurp tr, #dwvohhfurp td, #dwvohhfurp th {
   border-style: none;
 }
 
-#wdkrigtxyc p {
+#dwvohhfurp p {
   margin: 0;
   padding: 0;
 }
 
-#wdkrigtxyc .gt_table {
+#dwvohhfurp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3699,12 +3703,12 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-left-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_caption {
+#dwvohhfurp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wdkrigtxyc .gt_title {
+#dwvohhfurp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3716,7 +3720,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-width: 0;
 }
 
-#wdkrigtxyc .gt_subtitle {
+#dwvohhfurp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3728,7 +3732,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-width: 0;
 }
 
-#wdkrigtxyc .gt_heading {
+#dwvohhfurp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3740,13 +3744,13 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_bottom_border {
+#dwvohhfurp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_col_headings {
+#dwvohhfurp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3761,7 +3765,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_col_heading {
+#dwvohhfurp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3781,7 +3785,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#wdkrigtxyc .gt_column_spanner_outer {
+#dwvohhfurp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3793,15 +3797,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 4px;
 }
 
-#wdkrigtxyc .gt_column_spanner_outer:first-child {
+#dwvohhfurp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wdkrigtxyc .gt_column_spanner_outer:last-child {
+#dwvohhfurp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wdkrigtxyc .gt_column_spanner {
+#dwvohhfurp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3813,11 +3817,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   width: 100%;
 }
 
-#wdkrigtxyc .gt_spanner_row {
+#dwvohhfurp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wdkrigtxyc .gt_group_heading {
+#dwvohhfurp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3843,7 +3847,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   text-align: left;
 }
 
-#wdkrigtxyc .gt_empty_group_heading {
+#dwvohhfurp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3858,15 +3862,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: middle;
 }
 
-#wdkrigtxyc .gt_from_md > :first-child {
+#dwvohhfurp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wdkrigtxyc .gt_from_md > :last-child {
+#dwvohhfurp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wdkrigtxyc .gt_row {
+#dwvohhfurp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3885,7 +3889,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#wdkrigtxyc .gt_stub {
+#dwvohhfurp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3898,7 +3902,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#wdkrigtxyc .gt_stub_row_group {
+#dwvohhfurp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3912,15 +3916,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: top;
 }
 
-#wdkrigtxyc .gt_row_group_first td {
+#dwvohhfurp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wdkrigtxyc .gt_row_group_first th {
+#dwvohhfurp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wdkrigtxyc .gt_summary_row {
+#dwvohhfurp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3930,16 +3934,16 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#wdkrigtxyc .gt_first_summary_row {
+#dwvohhfurp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_first_summary_row.thick {
+#dwvohhfurp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wdkrigtxyc .gt_last_summary_row {
+#dwvohhfurp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3949,7 +3953,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_grand_summary_row {
+#dwvohhfurp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3959,7 +3963,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#wdkrigtxyc .gt_first_grand_summary_row {
+#dwvohhfurp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3969,7 +3973,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_last_grand_summary_row_top {
+#dwvohhfurp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3979,11 +3983,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_striped {
+#dwvohhfurp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wdkrigtxyc .gt_table_body {
+#dwvohhfurp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3992,7 +3996,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_footnotes {
+#dwvohhfurp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4006,7 +4010,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_footnote {
+#dwvohhfurp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4015,7 +4019,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#wdkrigtxyc .gt_sourcenotes {
+#dwvohhfurp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4029,7 +4033,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#wdkrigtxyc .gt_sourcenote {
+#dwvohhfurp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4037,72 +4041,72 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#wdkrigtxyc .gt_left {
+#dwvohhfurp .gt_left {
   text-align: left;
 }
 
-#wdkrigtxyc .gt_center {
+#dwvohhfurp .gt_center {
   text-align: center;
 }
 
-#wdkrigtxyc .gt_right {
+#dwvohhfurp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wdkrigtxyc .gt_font_normal {
+#dwvohhfurp .gt_font_normal {
   font-weight: normal;
 }
 
-#wdkrigtxyc .gt_font_bold {
+#dwvohhfurp .gt_font_bold {
   font-weight: bold;
 }
 
-#wdkrigtxyc .gt_font_italic {
+#dwvohhfurp .gt_font_italic {
   font-style: italic;
 }
 
-#wdkrigtxyc .gt_super {
+#dwvohhfurp .gt_super {
   font-size: 65%;
 }
 
-#wdkrigtxyc .gt_footnote_marks {
+#dwvohhfurp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wdkrigtxyc .gt_asterisk {
+#dwvohhfurp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wdkrigtxyc .gt_indent_1 {
+#dwvohhfurp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wdkrigtxyc .gt_indent_2 {
+#dwvohhfurp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wdkrigtxyc .gt_indent_3 {
+#dwvohhfurp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wdkrigtxyc .gt_indent_4 {
+#dwvohhfurp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wdkrigtxyc .gt_indent_5 {
+#dwvohhfurp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wdkrigtxyc .katex-display {
+#dwvohhfurp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wdkrigtxyc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dwvohhfurp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4156,26 +4160,28 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
 
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>migration_exc <span class="ot">&lt;-</span> migration_selected <span class="sc">|&gt;</span> <span class="fu">filter</span>(Site <span class="sc">!=</span> <span class="st">"Spain"</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(migration_exc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>migration_exc <span class="ot">&lt;-</span> migration_selected <span class="sc">|&gt;</span> <span class="fu">filter</span>(Site <span class="sc">!=</span> <span class="st">"Spain"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(migration_exc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="kpufvejqov" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kpufvejqov table {
+<div id="ivsyotaivw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ivsyotaivw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kpufvejqov thead, #kpufvejqov tbody, #kpufvejqov tfoot, #kpufvejqov tr, #kpufvejqov td, #kpufvejqov th {
+#ivsyotaivw thead, #ivsyotaivw tbody, #ivsyotaivw tfoot, #ivsyotaivw tr, #ivsyotaivw td, #ivsyotaivw th {
   border-style: none;
 }
 
-#kpufvejqov p {
+#ivsyotaivw p {
   margin: 0;
   padding: 0;
 }
 
-#kpufvejqov .gt_table {
+#ivsyotaivw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4201,12 +4207,12 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-left-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_caption {
+#ivsyotaivw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kpufvejqov .gt_title {
+#ivsyotaivw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4218,7 +4224,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-width: 0;
 }
 
-#kpufvejqov .gt_subtitle {
+#ivsyotaivw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4230,7 +4236,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-width: 0;
 }
 
-#kpufvejqov .gt_heading {
+#ivsyotaivw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4242,13 +4248,13 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_bottom_border {
+#ivsyotaivw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_col_headings {
+#ivsyotaivw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4263,7 +4269,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_col_heading {
+#ivsyotaivw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4283,7 +4289,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#kpufvejqov .gt_column_spanner_outer {
+#ivsyotaivw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4295,15 +4301,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 4px;
 }
 
-#kpufvejqov .gt_column_spanner_outer:first-child {
+#ivsyotaivw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kpufvejqov .gt_column_spanner_outer:last-child {
+#ivsyotaivw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kpufvejqov .gt_column_spanner {
+#ivsyotaivw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4315,11 +4321,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   width: 100%;
 }
 
-#kpufvejqov .gt_spanner_row {
+#ivsyotaivw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kpufvejqov .gt_group_heading {
+#ivsyotaivw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4345,7 +4351,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   text-align: left;
 }
 
-#kpufvejqov .gt_empty_group_heading {
+#ivsyotaivw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4360,15 +4366,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: middle;
 }
 
-#kpufvejqov .gt_from_md > :first-child {
+#ivsyotaivw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kpufvejqov .gt_from_md > :last-child {
+#ivsyotaivw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kpufvejqov .gt_row {
+#ivsyotaivw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4387,7 +4393,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   overflow-x: hidden;
 }
 
-#kpufvejqov .gt_stub {
+#ivsyotaivw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4400,7 +4406,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#kpufvejqov .gt_stub_row_group {
+#ivsyotaivw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4414,15 +4420,15 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   vertical-align: top;
 }
 
-#kpufvejqov .gt_row_group_first td {
+#ivsyotaivw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kpufvejqov .gt_row_group_first th {
+#ivsyotaivw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kpufvejqov .gt_summary_row {
+#ivsyotaivw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4432,16 +4438,16 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#kpufvejqov .gt_first_summary_row {
+#ivsyotaivw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_first_summary_row.thick {
+#ivsyotaivw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kpufvejqov .gt_last_summary_row {
+#ivsyotaivw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4451,7 +4457,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_grand_summary_row {
+#ivsyotaivw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4461,7 +4467,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#kpufvejqov .gt_first_grand_summary_row {
+#ivsyotaivw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4471,7 +4477,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-top-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_last_grand_summary_row_top {
+#ivsyotaivw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4481,11 +4487,11 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_striped {
+#ivsyotaivw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kpufvejqov .gt_table_body {
+#ivsyotaivw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4494,7 +4500,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-bottom-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_footnotes {
+#ivsyotaivw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4508,7 +4514,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_footnote {
+#ivsyotaivw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4517,7 +4523,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#kpufvejqov .gt_sourcenotes {
+#ivsyotaivw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4531,7 +4537,7 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   border-right-color: #D3D3D3;
 }
 
-#kpufvejqov .gt_sourcenote {
+#ivsyotaivw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4539,72 +4545,72 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
   padding-right: 5px;
 }
 
-#kpufvejqov .gt_left {
+#ivsyotaivw .gt_left {
   text-align: left;
 }
 
-#kpufvejqov .gt_center {
+#ivsyotaivw .gt_center {
   text-align: center;
 }
 
-#kpufvejqov .gt_right {
+#ivsyotaivw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kpufvejqov .gt_font_normal {
+#ivsyotaivw .gt_font_normal {
   font-weight: normal;
 }
 
-#kpufvejqov .gt_font_bold {
+#ivsyotaivw .gt_font_bold {
   font-weight: bold;
 }
 
-#kpufvejqov .gt_font_italic {
+#ivsyotaivw .gt_font_italic {
   font-style: italic;
 }
 
-#kpufvejqov .gt_super {
+#ivsyotaivw .gt_super {
   font-size: 65%;
 }
 
-#kpufvejqov .gt_footnote_marks {
+#ivsyotaivw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kpufvejqov .gt_asterisk {
+#ivsyotaivw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kpufvejqov .gt_indent_1 {
+#ivsyotaivw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kpufvejqov .gt_indent_2 {
+#ivsyotaivw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kpufvejqov .gt_indent_3 {
+#ivsyotaivw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kpufvejqov .gt_indent_4 {
+#ivsyotaivw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kpufvejqov .gt_indent_5 {
+#ivsyotaivw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kpufvejqov .katex-display {
+#ivsyotaivw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kpufvejqov div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ivsyotaivw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5665,8 +5671,8 @@ $ returnHatch_Jy    &lt;dbl&gt; 535, 517, NA, 517, 524, NA, 526, 523, 524, 522, 
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>migration_grouped <span class="ot">&lt;-</span> migration_exc <span class="sc">|&gt;</span> <span class="fu">group_by</span>(Site)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(migration_grouped)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>migration_grouped <span class="ot">&lt;-</span> migration_exc <span class="sc">|&gt;</span> <span class="fu">group_by</span>(Site)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(migration_grouped)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 94
 Columns: 9
@@ -5681,28 +5687,28 @@ $ Iberian_Latitude   &lt;dbl&gt; 41.51223, 42.13779, 35.72224, 35.03179, 36.1738
 $ Westmost_Longitude &lt;dbl&gt; -16.83263, -16.07610, -18.19715, -16.57398, -15.008…
 $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.81672, 4…</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>lat_df <span class="ot">&lt;-</span> migration_grouped <span class="sc">|&gt;</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Highest_Lat_Stopover =</span> <span class="fu">max</span>(Stopover_Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(lat_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>lat_df <span class="ot">&lt;-</span> migration_grouped <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Highest_Lat_Stopover =</span> <span class="fu">max</span>(Stopover_Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(lat_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fvrpnurcmy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fvrpnurcmy table {
+<div id="fzlamecnxd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fzlamecnxd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fvrpnurcmy thead, #fvrpnurcmy tbody, #fvrpnurcmy tfoot, #fvrpnurcmy tr, #fvrpnurcmy td, #fvrpnurcmy th {
+#fzlamecnxd thead, #fzlamecnxd tbody, #fzlamecnxd tfoot, #fzlamecnxd tr, #fzlamecnxd td, #fzlamecnxd th {
   border-style: none;
 }
 
-#fvrpnurcmy p {
+#fzlamecnxd p {
   margin: 0;
   padding: 0;
 }
 
-#fvrpnurcmy .gt_table {
+#fzlamecnxd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5728,12 +5734,12 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-left-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_caption {
+#fzlamecnxd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fvrpnurcmy .gt_title {
+#fzlamecnxd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5745,7 +5751,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-bottom-width: 0;
 }
 
-#fvrpnurcmy .gt_subtitle {
+#fzlamecnxd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5757,7 +5763,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-top-width: 0;
 }
 
-#fvrpnurcmy .gt_heading {
+#fzlamecnxd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5769,13 +5775,13 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-right-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_bottom_border {
+#fzlamecnxd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_col_headings {
+#fzlamecnxd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5790,7 +5796,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-right-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_col_heading {
+#fzlamecnxd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5810,7 +5816,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   overflow-x: hidden;
 }
 
-#fvrpnurcmy .gt_column_spanner_outer {
+#fzlamecnxd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5822,15 +5828,15 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   padding-right: 4px;
 }
 
-#fvrpnurcmy .gt_column_spanner_outer:first-child {
+#fzlamecnxd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fvrpnurcmy .gt_column_spanner_outer:last-child {
+#fzlamecnxd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fvrpnurcmy .gt_column_spanner {
+#fzlamecnxd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5842,11 +5848,11 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   width: 100%;
 }
 
-#fvrpnurcmy .gt_spanner_row {
+#fzlamecnxd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fvrpnurcmy .gt_group_heading {
+#fzlamecnxd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5872,7 +5878,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   text-align: left;
 }
 
-#fvrpnurcmy .gt_empty_group_heading {
+#fzlamecnxd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5887,15 +5893,15 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   vertical-align: middle;
 }
 
-#fvrpnurcmy .gt_from_md > :first-child {
+#fzlamecnxd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fvrpnurcmy .gt_from_md > :last-child {
+#fzlamecnxd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fvrpnurcmy .gt_row {
+#fzlamecnxd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5914,7 +5920,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   overflow-x: hidden;
 }
 
-#fvrpnurcmy .gt_stub {
+#fzlamecnxd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5927,7 +5933,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   padding-right: 5px;
 }
 
-#fvrpnurcmy .gt_stub_row_group {
+#fzlamecnxd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5941,15 +5947,15 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   vertical-align: top;
 }
 
-#fvrpnurcmy .gt_row_group_first td {
+#fzlamecnxd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fvrpnurcmy .gt_row_group_first th {
+#fzlamecnxd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fvrpnurcmy .gt_summary_row {
+#fzlamecnxd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5959,16 +5965,16 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   padding-right: 5px;
 }
 
-#fvrpnurcmy .gt_first_summary_row {
+#fzlamecnxd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_first_summary_row.thick {
+#fzlamecnxd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fvrpnurcmy .gt_last_summary_row {
+#fzlamecnxd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5978,7 +5984,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-bottom-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_grand_summary_row {
+#fzlamecnxd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5988,7 +5994,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   padding-right: 5px;
 }
 
-#fvrpnurcmy .gt_first_grand_summary_row {
+#fzlamecnxd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5998,7 +6004,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-top-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_last_grand_summary_row_top {
+#fzlamecnxd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6008,11 +6014,11 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-bottom-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_striped {
+#fzlamecnxd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fvrpnurcmy .gt_table_body {
+#fzlamecnxd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6021,7 +6027,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-bottom-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_footnotes {
+#fzlamecnxd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6035,7 +6041,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-right-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_footnote {
+#fzlamecnxd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6044,7 +6050,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   padding-right: 5px;
 }
 
-#fvrpnurcmy .gt_sourcenotes {
+#fzlamecnxd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6058,7 +6064,7 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   border-right-color: #D3D3D3;
 }
 
-#fvrpnurcmy .gt_sourcenote {
+#fzlamecnxd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6066,72 +6072,72 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
   padding-right: 5px;
 }
 
-#fvrpnurcmy .gt_left {
+#fzlamecnxd .gt_left {
   text-align: left;
 }
 
-#fvrpnurcmy .gt_center {
+#fzlamecnxd .gt_center {
   text-align: center;
 }
 
-#fvrpnurcmy .gt_right {
+#fzlamecnxd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fvrpnurcmy .gt_font_normal {
+#fzlamecnxd .gt_font_normal {
   font-weight: normal;
 }
 
-#fvrpnurcmy .gt_font_bold {
+#fzlamecnxd .gt_font_bold {
   font-weight: bold;
 }
 
-#fvrpnurcmy .gt_font_italic {
+#fzlamecnxd .gt_font_italic {
   font-style: italic;
 }
 
-#fvrpnurcmy .gt_super {
+#fzlamecnxd .gt_super {
   font-size: 65%;
 }
 
-#fvrpnurcmy .gt_footnote_marks {
+#fzlamecnxd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fvrpnurcmy .gt_asterisk {
+#fzlamecnxd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fvrpnurcmy .gt_indent_1 {
+#fzlamecnxd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fvrpnurcmy .gt_indent_2 {
+#fzlamecnxd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fvrpnurcmy .gt_indent_3 {
+#fzlamecnxd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fvrpnurcmy .gt_indent_4 {
+#fzlamecnxd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fvrpnurcmy .gt_indent_5 {
+#fzlamecnxd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fvrpnurcmy .katex-display {
+#fzlamecnxd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fvrpnurcmy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fzlamecnxd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6175,6 +6181,1319 @@ $ Westmost_Latitude  &lt;dbl&gt; 32.55738, 29.28441, 30.77262, 33.41686, 24.8167
 </tbody>
 </table>
 
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>migration_grouped <span class="ot">&lt;-</span> migration_exc <span class="sc">|&gt;</span> <span class="fu">group_by</span>(Site)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>migration_summary <span class="ot">&lt;-</span> migration_grouped <span class="sc">|&gt;</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>( </span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Stopover_Longitude =</span> <span class="fu">median</span>(Stopover_Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Stopover_Latitude =</span> <span class="fu">median</span>(Stopover_Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Iberian_Latitude =</span> <span class="fu">median</span>(Iberian_Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Iberian_Longitude =</span> <span class="fu">median</span>(Iberian_Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Westmost_Latitude =</span> <span class="fu">median</span>(Westmost_Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">Westmost_Longitude =</span> <span class="fu">median</span>(Westmost_Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">Winter_Longitude =</span> <span class="fu">median</span>(Winter_Longitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Winter_Latitude =</span> <span class="fu">median</span>(Winter_Latitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(migration_summary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="gbgarsvnum" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gbgarsvnum table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gbgarsvnum thead, #gbgarsvnum tbody, #gbgarsvnum tfoot, #gbgarsvnum tr, #gbgarsvnum td, #gbgarsvnum th {
+  border-style: none;
+}
+
+#gbgarsvnum p {
+  margin: 0;
+  padding: 0;
+}
+
+#gbgarsvnum .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gbgarsvnum .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gbgarsvnum .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gbgarsvnum .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gbgarsvnum .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gbgarsvnum .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gbgarsvnum .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gbgarsvnum .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gbgarsvnum .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gbgarsvnum .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gbgarsvnum .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gbgarsvnum .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gbgarsvnum .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gbgarsvnum .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gbgarsvnum .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gbgarsvnum .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gbgarsvnum .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gbgarsvnum .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gbgarsvnum .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gbgarsvnum .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gbgarsvnum .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gbgarsvnum .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gbgarsvnum .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gbgarsvnum .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gbgarsvnum .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gbgarsvnum .gt_left {
+  text-align: left;
+}
+
+#gbgarsvnum .gt_center {
+  text-align: center;
+}
+
+#gbgarsvnum .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gbgarsvnum .gt_font_normal {
+  font-weight: normal;
+}
+
+#gbgarsvnum .gt_font_bold {
+  font-weight: bold;
+}
+
+#gbgarsvnum .gt_font_italic {
+  font-style: italic;
+}
+
+#gbgarsvnum .gt_super {
+  font-size: 65%;
+}
+
+#gbgarsvnum .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gbgarsvnum .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gbgarsvnum .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gbgarsvnum .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gbgarsvnum .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gbgarsvnum .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gbgarsvnum .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#gbgarsvnum .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gbgarsvnum div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Site" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Site</th>
+<th id="Stopover_Longitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Stopover_Longitude</th>
+<th id="Stopover_Latitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Stopover_Latitude</th>
+<th id="Iberian_Latitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Iberian_Latitude</th>
+<th id="Iberian_Longitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Iberian_Longitude</th>
+<th id="Westmost_Latitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Westmost_Latitude</th>
+<th id="Westmost_Longitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Westmost_Longitude</th>
+<th id="Winter_Longitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Winter_Longitude</th>
+<th id="Winter_Latitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Winter_Latitude</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Dartmoor</td>
+<td class="gt_row gt_right" headers="Stopover_Longitude">-6.960063</td>
+<td class="gt_row gt_right" headers="Stopover_Latitude">33.60564</td>
+<td class="gt_row gt_right" headers="Iberian_Latitude">41.17061</td>
+<td class="gt_row gt_right" headers="Iberian_Longitude">-8.313931</td>
+<td class="gt_row gt_right" headers="Westmost_Latitude">28.43045</td>
+<td class="gt_row gt_right" headers="Westmost_Longitude">-15.97404</td>
+<td class="gt_row gt_right" headers="Winter_Longitude">-10.455994</td>
+<td class="gt_row gt_right" headers="Winter_Latitude">8.548031</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Drenthe</td>
+<td class="gt_row gt_right" headers="Stopover_Longitude">-3.294825</td>
+<td class="gt_row gt_right" headers="Stopover_Latitude">34.35092</td>
+<td class="gt_row gt_right" headers="Iberian_Latitude">41.03441</td>
+<td class="gt_row gt_right" headers="Iberian_Longitude">-7.419231</td>
+<td class="gt_row gt_right" headers="Westmost_Latitude">26.56603</td>
+<td class="gt_row gt_right" headers="Westmost_Longitude">-15.04224</td>
+<td class="gt_row gt_right" headers="Winter_Longitude">-6.771422</td>
+<td class="gt_row gt_right" headers="Winter_Latitude">9.484628</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Moscow</td>
+<td class="gt_row gt_right" headers="Stopover_Longitude">3.344786</td>
+<td class="gt_row gt_right" headers="Stopover_Latitude">34.18789</td>
+<td class="gt_row gt_right" headers="Iberian_Latitude">40.53730</td>
+<td class="gt_row gt_right" headers="Iberian_Longitude">-6.390574</td>
+<td class="gt_row gt_right" headers="Westmost_Latitude">27.75654</td>
+<td class="gt_row gt_right" headers="Westmost_Longitude">-15.32819</td>
+<td class="gt_row gt_right" headers="Winter_Longitude">-5.580291</td>
+<td class="gt_row gt_right" headers="Winter_Latitude">9.174023</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Norway</td>
+<td class="gt_row gt_right" headers="Stopover_Longitude">-7.901921</td>
+<td class="gt_row gt_right" headers="Stopover_Latitude">32.12198</td>
+<td class="gt_row gt_right" headers="Iberian_Latitude">43.08278</td>
+<td class="gt_row gt_right" headers="Iberian_Longitude">-7.993204</td>
+<td class="gt_row gt_right" headers="Westmost_Latitude">11.39228</td>
+<td class="gt_row gt_right" headers="Westmost_Longitude">-15.06716</td>
+<td class="gt_row gt_right" headers="Winter_Longitude">-13.544330</td>
+<td class="gt_row gt_right" headers="Winter_Latitude">9.659171</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Tomsk</td>
+<td class="gt_row gt_right" headers="Stopover_Longitude">14.198830</td>
+<td class="gt_row gt_right" headers="Stopover_Latitude">34.92907</td>
+<td class="gt_row gt_right" headers="Iberian_Latitude">42.05260</td>
+<td class="gt_row gt_right" headers="Iberian_Longitude">-6.591126</td>
+<td class="gt_row gt_right" headers="Westmost_Latitude">18.47745</td>
+<td class="gt_row gt_right" headers="Westmost_Longitude">-14.83484</td>
+<td class="gt_row gt_right" headers="Winter_Longitude">16.772128</td>
+<td class="gt_row gt_right" headers="Winter_Latitude">6.776382</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Ural</td>
+<td class="gt_row gt_right" headers="Stopover_Longitude">26.866285</td>
+<td class="gt_row gt_right" headers="Stopover_Latitude">44.13371</td>
+<td class="gt_row gt_right" headers="Iberian_Latitude">37.85253</td>
+<td class="gt_row gt_right" headers="Iberian_Longitude">-5.805867</td>
+<td class="gt_row gt_right" headers="Westmost_Latitude">12.36476</td>
+<td class="gt_row gt_right" headers="Westmost_Longitude">-17.63540</td>
+<td class="gt_row gt_right" headers="Winter_Longitude">9.195512</td>
+<td class="gt_row gt_right" headers="Winter_Latitude">4.093563</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Vomb</td>
+<td class="gt_row gt_right" headers="Stopover_Longitude">-3.560216</td>
+<td class="gt_row gt_right" headers="Stopover_Latitude">35.77830</td>
+<td class="gt_row gt_right" headers="Iberian_Latitude">41.70017</td>
+<td class="gt_row gt_right" headers="Iberian_Longitude">-6.707712</td>
+<td class="gt_row gt_right" headers="Westmost_Latitude">29.28441</td>
+<td class="gt_row gt_right" headers="Westmost_Longitude">-15.68975</td>
+<td class="gt_row gt_right" headers="Winter_Longitude">-11.401071</td>
+<td class="gt_row gt_right" headers="Winter_Latitude">9.761893</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>combined_bird_data <span class="ot">&lt;-</span> <span class="fu">full_join</span>(breeding_exc, migration_summary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(Site)`</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>combined_bird_piv <span class="ot">&lt;-</span> combined_bird_data <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">ends_with</span>(<span class="fu">c</span>(<span class="st">"_Longitude"</span>, <span class="st">"_Latitude"</span>)),</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">"_"</span>,</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">"Location_Type"</span>, <span class="st">".value"</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>keep_autumn <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Breeding"</span>, <span class="st">"Stopover"</span>, <span class="st">"Winter"</span>)</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>keep_spring <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Breeding"</span>, <span class="st">"Iberian"</span>, <span class="st">"Westmost"</span>, <span class="st">"Winter"</span>)</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>spring_data <span class="ot">&lt;-</span> combined_bird_piv<span class="sc">|&gt;</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Location_Type <span class="sc">%in%</span> keep_spring)</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>autumn_data <span class="ot">&lt;-</span> combined_bird_piv<span class="sc">|&gt;</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Location_Type <span class="sc">%in%</span> keep_autumn)</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(spring_data, <span class="st">"output/birds_spring.csv"</span>)</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(autumn_data, <span class="st">"output/birds_autumn.csv"</span>)</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(combined_bird_piv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fexcjglajc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fexcjglajc table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fexcjglajc thead, #fexcjglajc tbody, #fexcjglajc tfoot, #fexcjglajc tr, #fexcjglajc td, #fexcjglajc th {
+  border-style: none;
+}
+
+#fexcjglajc p {
+  margin: 0;
+  padding: 0;
+}
+
+#fexcjglajc .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#fexcjglajc .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fexcjglajc .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fexcjglajc .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fexcjglajc .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fexcjglajc .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fexcjglajc .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fexcjglajc .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fexcjglajc .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#fexcjglajc .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#fexcjglajc .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fexcjglajc .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fexcjglajc .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fexcjglajc .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fexcjglajc .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fexcjglajc .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fexcjglajc .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fexcjglajc .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#fexcjglajc .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fexcjglajc .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fexcjglajc .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fexcjglajc .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fexcjglajc .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fexcjglajc .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fexcjglajc .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fexcjglajc .gt_left {
+  text-align: left;
+}
+
+#fexcjglajc .gt_center {
+  text-align: center;
+}
+
+#fexcjglajc .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fexcjglajc .gt_font_normal {
+  font-weight: normal;
+}
+
+#fexcjglajc .gt_font_bold {
+  font-weight: bold;
+}
+
+#fexcjglajc .gt_font_italic {
+  font-style: italic;
+}
+
+#fexcjglajc .gt_super {
+  font-size: 65%;
+}
+
+#fexcjglajc .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#fexcjglajc .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fexcjglajc .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fexcjglajc .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fexcjglajc .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fexcjglajc .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fexcjglajc .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#fexcjglajc .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#fexcjglajc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Site" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Site</th>
+<th id="Location_Type" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Location_Type</th>
+<th id="Longitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Longitude</th>
+<th id="Latitude" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Latitude</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Dartmoor</td>
+<td class="gt_row gt_left" headers="Location_Type">Breeding</td>
+<td class="gt_row gt_right" headers="Longitude">-3.700000</td>
+<td class="gt_row gt_right" headers="Latitude">50.600000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Dartmoor</td>
+<td class="gt_row gt_left" headers="Location_Type">Stopover</td>
+<td class="gt_row gt_right" headers="Longitude">-6.960063</td>
+<td class="gt_row gt_right" headers="Latitude">33.605640</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Dartmoor</td>
+<td class="gt_row gt_left" headers="Location_Type">Iberian</td>
+<td class="gt_row gt_right" headers="Longitude">-8.313931</td>
+<td class="gt_row gt_right" headers="Latitude">41.170607</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Dartmoor</td>
+<td class="gt_row gt_left" headers="Location_Type">Westmost</td>
+<td class="gt_row gt_right" headers="Longitude">-15.974044</td>
+<td class="gt_row gt_right" headers="Latitude">28.430452</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Dartmoor</td>
+<td class="gt_row gt_left" headers="Location_Type">Winter</td>
+<td class="gt_row gt_right" headers="Longitude">-10.455994</td>
+<td class="gt_row gt_right" headers="Latitude">8.548031</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Drenthe</td>
+<td class="gt_row gt_left" headers="Location_Type">Breeding</td>
+<td class="gt_row gt_right" headers="Longitude">6.400000</td>
+<td class="gt_row gt_right" headers="Latitude">52.800000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Drenthe</td>
+<td class="gt_row gt_left" headers="Location_Type">Stopover</td>
+<td class="gt_row gt_right" headers="Longitude">-3.294825</td>
+<td class="gt_row gt_right" headers="Latitude">34.350915</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Drenthe</td>
+<td class="gt_row gt_left" headers="Location_Type">Iberian</td>
+<td class="gt_row gt_right" headers="Longitude">-7.419231</td>
+<td class="gt_row gt_right" headers="Latitude">41.034406</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Drenthe</td>
+<td class="gt_row gt_left" headers="Location_Type">Westmost</td>
+<td class="gt_row gt_right" headers="Longitude">-15.042243</td>
+<td class="gt_row gt_right" headers="Latitude">26.566032</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Drenthe</td>
+<td class="gt_row gt_left" headers="Location_Type">Winter</td>
+<td class="gt_row gt_right" headers="Longitude">-6.771422</td>
+<td class="gt_row gt_right" headers="Latitude">9.484628</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Vomb</td>
+<td class="gt_row gt_left" headers="Location_Type">Breeding</td>
+<td class="gt_row gt_right" headers="Longitude">13.600000</td>
+<td class="gt_row gt_right" headers="Latitude">55.700000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Vomb</td>
+<td class="gt_row gt_left" headers="Location_Type">Stopover</td>
+<td class="gt_row gt_right" headers="Longitude">-3.560216</td>
+<td class="gt_row gt_right" headers="Latitude">35.778304</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Vomb</td>
+<td class="gt_row gt_left" headers="Location_Type">Iberian</td>
+<td class="gt_row gt_right" headers="Longitude">-6.707712</td>
+<td class="gt_row gt_right" headers="Latitude">41.700167</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Vomb</td>
+<td class="gt_row gt_left" headers="Location_Type">Westmost</td>
+<td class="gt_row gt_right" headers="Longitude">-15.689749</td>
+<td class="gt_row gt_right" headers="Latitude">29.284414</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Vomb</td>
+<td class="gt_row gt_left" headers="Location_Type">Winter</td>
+<td class="gt_row gt_right" headers="Longitude">-11.401071</td>
+<td class="gt_row gt_right" headers="Latitude">9.761893</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Norway</td>
+<td class="gt_row gt_left" headers="Location_Type">Breeding</td>
+<td class="gt_row gt_right" headers="Longitude">10.600000</td>
+<td class="gt_row gt_right" headers="Latitude">60.000000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Norway</td>
+<td class="gt_row gt_left" headers="Location_Type">Stopover</td>
+<td class="gt_row gt_right" headers="Longitude">-7.901921</td>
+<td class="gt_row gt_right" headers="Latitude">32.121977</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Norway</td>
+<td class="gt_row gt_left" headers="Location_Type">Iberian</td>
+<td class="gt_row gt_right" headers="Longitude">-7.993204</td>
+<td class="gt_row gt_right" headers="Latitude">43.082781</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Norway</td>
+<td class="gt_row gt_left" headers="Location_Type">Westmost</td>
+<td class="gt_row gt_right" headers="Longitude">-15.067157</td>
+<td class="gt_row gt_right" headers="Latitude">11.392281</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Norway</td>
+<td class="gt_row gt_left" headers="Location_Type">Winter</td>
+<td class="gt_row gt_right" headers="Longitude">-13.544330</td>
+<td class="gt_row gt_right" headers="Latitude">9.659171</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Moscow</td>
+<td class="gt_row gt_left" headers="Location_Type">Breeding</td>
+<td class="gt_row gt_right" headers="Longitude">36.700000</td>
+<td class="gt_row gt_right" headers="Latitude">55.700000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Moscow</td>
+<td class="gt_row gt_left" headers="Location_Type">Stopover</td>
+<td class="gt_row gt_right" headers="Longitude">3.344786</td>
+<td class="gt_row gt_right" headers="Latitude">34.187892</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Moscow</td>
+<td class="gt_row gt_left" headers="Location_Type">Iberian</td>
+<td class="gt_row gt_right" headers="Longitude">-6.390574</td>
+<td class="gt_row gt_right" headers="Latitude">40.537295</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Moscow</td>
+<td class="gt_row gt_left" headers="Location_Type">Westmost</td>
+<td class="gt_row gt_right" headers="Longitude">-15.328194</td>
+<td class="gt_row gt_right" headers="Latitude">27.756543</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Moscow</td>
+<td class="gt_row gt_left" headers="Location_Type">Winter</td>
+<td class="gt_row gt_right" headers="Longitude">-5.580291</td>
+<td class="gt_row gt_right" headers="Latitude">9.174023</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Ural</td>
+<td class="gt_row gt_left" headers="Location_Type">Breeding</td>
+<td class="gt_row gt_right" headers="Longitude">59.900000</td>
+<td class="gt_row gt_right" headers="Latitude">56.900000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Ural</td>
+<td class="gt_row gt_left" headers="Location_Type">Stopover</td>
+<td class="gt_row gt_right" headers="Longitude">26.866285</td>
+<td class="gt_row gt_right" headers="Latitude">44.133714</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Ural</td>
+<td class="gt_row gt_left" headers="Location_Type">Iberian</td>
+<td class="gt_row gt_right" headers="Longitude">-5.805867</td>
+<td class="gt_row gt_right" headers="Latitude">37.852530</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Ural</td>
+<td class="gt_row gt_left" headers="Location_Type">Westmost</td>
+<td class="gt_row gt_right" headers="Longitude">-17.635402</td>
+<td class="gt_row gt_right" headers="Latitude">12.364759</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Ural</td>
+<td class="gt_row gt_left" headers="Location_Type">Winter</td>
+<td class="gt_row gt_right" headers="Longitude">9.195512</td>
+<td class="gt_row gt_right" headers="Latitude">4.093563</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Tomsk</td>
+<td class="gt_row gt_left" headers="Location_Type">Breeding</td>
+<td class="gt_row gt_right" headers="Longitude">84.600000</td>
+<td class="gt_row gt_right" headers="Latitude">56.200000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Tomsk</td>
+<td class="gt_row gt_left" headers="Location_Type">Stopover</td>
+<td class="gt_row gt_right" headers="Longitude">14.198830</td>
+<td class="gt_row gt_right" headers="Latitude">34.929071</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Tomsk</td>
+<td class="gt_row gt_left" headers="Location_Type">Iberian</td>
+<td class="gt_row gt_right" headers="Longitude">-6.591126</td>
+<td class="gt_row gt_right" headers="Latitude">42.052603</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Site">Tomsk</td>
+<td class="gt_row gt_left" headers="Location_Type">Westmost</td>
+<td class="gt_row gt_right" headers="Longitude">-14.834837</td>
+<td class="gt_row gt_right" headers="Latitude">18.477446</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Site">Tomsk</td>
+<td class="gt_row gt_left" headers="Location_Type">Winter</td>
+<td class="gt_row gt_right" headers="Longitude">16.772128</td>
+<td class="gt_row gt_right" headers="Latitude">6.776382</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>min_lon <span class="ot">&lt;-</span> spring_data <span class="sc">|&gt;</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(Longitude) <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>()</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(min_lon)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -17.6354</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>max_lon <span class="ot">&lt;-</span> spring_data <span class="sc">|&gt;</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(Longitude) <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">max</span>()</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(max_lon)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 84.6</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>min_lat <span class="ot">&lt;-</span> spring_data <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(Latitude) <span class="sc">|&gt;</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">min</span>()</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(min_lat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.093563</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>max_lat <span class="ot">&lt;-</span> spring_data <span class="sc">|&gt;</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(Latitude) <span class="sc">|&gt;</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">max</span>()</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(max_lat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 60</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  spring_data,</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>( <span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">color =</span> Site, <span class="at">shape =</span> Location_Type)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_borders</span>(<span class="at">linewidth =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_quickmap</span>(</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(min_lon <span class="sc">-</span> <span class="dv">2</span>, max_lon <span class="sc">+</span> <span class="dv">2</span>),</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(min_lat <span class="sc">-</span> <span class="dv">2</span>, max_lat <span class="sc">+</span> <span class="dv">2</span>)</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_path</span>(<span class="fu">aes</span>(<span class="at">group =</span> Site)) <span class="sc">+</span></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Pied Flycatcher Spring Migration Routes"</span>) <span class="sc">+</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Longitude (°)"</span>) <span class="sc">+</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Latitude (°)"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="worked_example_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>
