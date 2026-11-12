@@ -1,0 +1,31 @@
+---
+title: "prac3_exercises"
+---
+
+```{r}
+set.seed(42)
+for (i in seq_len(20)){
+  j <- i^3
+  print(j)
+}
+for (i in seq_len(5)){
+  j <- paste(sample(letters, 5, replace = TRUE), collapse="")
+  print(j)
+}
+library(cowsay)
+species <- c("alligator", "anxiouscat", "bat2", "behindcat",
+  "bigcat", "blowfish", "buffalo", "cat", "chicken", "cow_borg", "cow_dead",
+  "cow_greedy", "cow_sleepy", "cow_tired", "cow_wired", "cow_young", "cow", "daemon", "dragon",
+  "duck", "duckling", "egret", "endlesshorse", "facecat", "fish", "frog", "ghost", "goldfish",
+  "grumpycat", "hypnotoad", "longcat", "longtailcat", "monkey", "mushroom", "owl", "rabbit", "shark", "shortcat", "signbunny", "smallcat", "snowman", "spider",
+  "squirrel", "squirrel2", "stegosaurus", "stretchycat", "turkey", "whale", "wolf",
+  "yoda")
+
+for (spp in species) {
+  say(paste("I am a", spp), by = spp)
+}
+
+
+```
+
+   
